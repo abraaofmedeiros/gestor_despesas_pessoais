@@ -46,13 +46,13 @@ def update_monthly_goal():
         new_goal = float(input("Digite a nova meta de gastos mensal: (0 para sair) R$ "))
         
         if(new_goal == 0):
-            break
-
-        if(new_goal <= 0):
-            print("Valor inválido, tente novamente.")
             return
-        else:
+
+        if(new_goal > 0):
             break
+        
+        print("Valor inválido, tente novamente.")
+            
 
     update_meta_mensal(app.active_user["id"], new_goal)
 
@@ -181,6 +181,7 @@ def generate_report():
 
     # Calcular total de despesas do mês e comparar com a meta mensal
     print(f"Total de despesas: R${total_expenses:.2f}")
+
     if total_expenses > app.active_user["meta_mensal"]:
         print(f"Você excedeu sua meta mensal de R${app.active_user['meta_mensal']:.2f}!")
     else:

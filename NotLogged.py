@@ -54,12 +54,13 @@ def register():
             break
 
     # Armazenar usuário
-    usuario.inserir_usuario(name, username, password, meta_mensal)
+    inserir_usuario(name, username, password, meta_mensal)
     print("Usuário cadastrado com sucesso!")
 
 def login():
+    print("Login")
+    
     while True:
-        print("Login")
         username = input("Digite seu nome de usuário: (0 para sair) ")
 
         if username == "0":
@@ -67,15 +68,15 @@ def login():
         
         user = get_usuario(username)
         
-        if user is None:
-            return
+        if user is not None:
+            break
 
-        password = input("Digite sua senha: ")
+    password = input("Digite sua senha: ")
 
-        if user["senha"] == password:
-            app.set_active_user(user)
-            print("Login efetuado com sucesso!")
-            return
+    if user["senha"] == password:
+        app.set_active_user(user)
+        print("Login efetuado com sucesso!")
+        return
         
-        print("Usuário ou senha inválidos, tente novamente.")
+    print("Usuário ou senha inválidos, tente novamente.")
  

@@ -21,7 +21,7 @@ def checar_username(username):
     Retorna True se o username ja existe na tabela 'usuario', False caso contrario.
     """
     cursor = app.db.cursor()
-    cursor.execute("SELECT * FROM usuario WHERE username = ?", (username))
+    cursor.execute("SELECT * FROM usuario WHERE username = ?", (username,))
     return cursor.fetchone() is not None
 
 def get_usuario(username):

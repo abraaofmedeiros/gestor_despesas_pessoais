@@ -4,9 +4,6 @@ from NotLogged import *
 
 print("Bem Vindo ao gestor de despesas pessoais!")
 
-from models.usuario import get_usuario
-app.set_active_user(get_usuario('admin'))
-
 def display_menu():
     if app.get_active_user() == None:
         display_logged_out_menu()
