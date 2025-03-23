@@ -14,6 +14,10 @@ O sistema possibilita a realização das seguintes ações:
 - **Gerar Relatório**: O sistema gera um resumo das despesas do mês, permitindo ao usuário visualizar o total gasto em cada categoria e compará-lo com a meta estabelecida.
 - **Logout**: O usuário pode encerrar sua sessão, garantindo a privacidade de suas informações.
 
+## Estrutura do Banco de Dados
+![Modelo Banco de Dados desenvolvido no DBDesigner Online.](imagens_readme/5%20-%20modelo%20banco%20de%20dados.png)
+
+
 ## Estrutura do Projeto
 O código está estruturado em módulos para garantir organização e facilidade de manutenção:
 
@@ -36,6 +40,36 @@ O código está estruturado em módulos para garantir organização e facilidade
 
 
 - **README.md**: Documentação do projeto.
+
+## Como Executar o Projeto
+1. Certifique-se de ter o Python 3.7 ou superior instalado.
+2. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/sistema-despesas.git
+3. Acesse o diretório do projeto:
+    ```bash
+    cd sistema-despesas
+4. Execute o arquivo principal:
+    ```bash
+    python main.py
+
+## Como Interagir com a aplicação
+
+1. Ao iniciar o sistema, você pode cadastrar um novo usuário ou fazer login.
+![Menu para usuário não logado](imagens_readme/0%20-%20menu%20nao%20logado.png)
+
+2. Após o login, o menu exibirá opções como cadastrar categoria, registrar
+despesa e definir meta mensal.
+![Cadastro de categoria](imagens_readme/1%20-%20menu%20logado.png)
+
+3. Escolha uma opção digitando o número correspondente.
+![Cadastro de categoria](imagens_readme/2%20-%20cadastro%20categoria.png)
+
+4. Para gerar um relatório, selecione a opção e visualize um resumo das suas
+despesas.
+![Gerando relatório com sistema](imagens_readme/4%20-%20relatorio.png)
+
+5. Para sair da conta, selecione a opção de logout.
 
 ## Tecnologias Utilizadas
 A aplicação foi desenvolvida utilizando as seguintes tecnologias:
