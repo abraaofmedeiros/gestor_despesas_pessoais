@@ -1,11 +1,11 @@
 from App import app
 from models.usuario import *
-
+    # Escolhe entre loga ou se registrar
 def display_logged_out_menu():
     print("Menu - Selecione uma das opções abaixo:")
     print("1 - Login")
     print("2 - Registar")
-
+    # digita 2 se precisar criar uma conta ou 1 se já tem uma conta 
     option = input("Digite o número da opção desejada: ")
 
     match option:
@@ -13,7 +13,7 @@ def display_logged_out_menu():
             login()
         case "2":
             register()
-
+    # caso deseja criar uma nova conta
 def register():
     print("Registar Novo Usuário")
 
@@ -22,7 +22,7 @@ def register():
 
     if name == "0":
         return
-
+        
     # Receber username
     while True:
         username = input("Digite um nome de usuário: (0 para sair) ")
@@ -56,13 +56,13 @@ def register():
     # Armazenar usuário
     inserir_usuario(name, username, password, meta_mensal)
     print("Usuário cadastrado com sucesso!")
-
+    # logar
 def login():
     print("Login")
     
     while True:
         username = input("Digite seu nome de usuário: (0 para sair) ")
-
+    # voutar
         if username == "0":
             return
         
