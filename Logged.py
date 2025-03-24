@@ -33,11 +33,13 @@ def display_logged_in_menu():
             generate_report()
    
 def logout():
+    #confirmar se deseja deslogar
     confirm = input("Deseja realmente sair? (S/N)")
     if confirm == "S" or confirm == "s":
         app.set_active_user(None)
 
 def update_monthly_goal():
+    #Atualizar Meta Mensal
     print("Atualizar Meta Mensal")
     
     while True:
@@ -59,6 +61,7 @@ def update_monthly_goal():
     print("Meta atualizada com sucesso!")
 
 def add_category():
+    #Adicionar Categoria
     print("Adicionar Categoria")
     category_name = input("Digite o nome da categoria: ")
 
@@ -67,6 +70,7 @@ def add_category():
     print("Categoria adicionada com sucesso!")
 
 def add_expense():
+    #Cadastrar Despesa
     print("Cadastrar Despesa")
 
     # Receber descrição da despesa
@@ -124,6 +128,7 @@ def add_expense():
     print("Despesa cadastrada com sucesso!")
 
 def list_expenses():
+    #Listar Despesas
     print("Listar Despesas")
 
     user_expenses = get_user_expenses(app.active_user['id'])
